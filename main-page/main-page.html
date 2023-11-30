@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinheiro no bolso</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div id="title">
+      <h1>Econo<span>Wizard<i class="fa-solid fa-dollar-sign"></i></span></h1>
+    </div>
+    <div id="container">
+      <div class="content">
+        <i id="green" class="fa-solid fa-arrow-trend-up"></i>
+        <div class="main">
+          <p>Entradas</p>
+          <h3 id="entrada">R$ 0</h3>
+        </div>
+      </div>
+      <div class="content">
+        <i id="red" class="fa-solid fa-arrow-trend-down"></i>
+        <div class="main">
+          <p>Saidas</p>
+          <h3 id="saida">R$ 0</h3>
+        </div>
+      </div>
+      <div class="content">
+        <i id="carteira" class="fa-solid fa-wallet"></i>
+        <div class="main">
+          <p>Total</p>
+          <h3 id="total">R$ 0</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="form">
+      <div>
+        <input type="text" placeholder="Descrição..." id="desc">
+        <input type="number" placeholder="Valor..." id="valor">
+      </div>
+      <div id="options">
+        <button onclick="adicionar.change('e')" id="entrada">Entrada <i class="fa-solid fa-arrow-up"></i></button>
+        <button onclick="adicionar.change('s')">Saida <i class="fa-solid fa-arrow-down"></i></button>
+      </div>
+      <button id="add" onclick="adicionar.verify()">Adicionar</button>
+    </div>
+    <container id="mainContainer">
+      <div id="infos">
+        <p>Descrição</p>
+        <p>Valor</p>
+        <p>Tipo</p>
+        <p>Data</p>
+      </div>
+    </container>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
